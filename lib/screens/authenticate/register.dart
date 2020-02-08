@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 //import 'package:brew_crew/services/auth.dart';
 
 class Register extends StatefulWidget {
+
+  final Function toggleView;
+  Register({this.toggleView});
+
   @override
   _RegisterState createState() => _RegisterState();
 }
@@ -18,6 +22,14 @@ class _RegisterState extends State<Register> {
     return  Scaffold(
       backgroundColor: Colors.brown[200],
       appBar: AppBar(
+        actions: <Widget>[
+          FlatButton.icon(
+            onPressed: (){
+              widget.toggleView();
+            },
+             icon: Icon(Icons.person),
+              label: Text( 'Sign In'))
+        ],
         backgroundColor: Colors.brown[600],
         elevation: 0.0,
         title: Text('Sign Up To Brew Crew'),
