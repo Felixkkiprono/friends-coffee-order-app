@@ -42,11 +42,17 @@ class _SignInState extends State<SignIn> {
             children: <Widget>[
               SizedBox(height:20.0),
               TextFormField(
+                decoration: InputDecoration(
+                  hintText: "Email",
+                ),
                 onChanged:(val){
                   setState(() => email = val);
                 }
               ),
               TextFormField(
+                decoration: InputDecoration(
+                  hintText: 'Password',
+                ),
                 obscureText:true,
                 onChanged: (val){
                   setState(() => password =val);

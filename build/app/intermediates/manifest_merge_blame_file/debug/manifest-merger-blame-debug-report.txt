@@ -17,8 +17,8 @@
 15    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
 16    <!-- <uses-sdk android:minSdkVersion="14" /> -->
 17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-17-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\Kendagor\.gradle\caches\transforms-2\files-2.1\1119d558f2e8d4849ba61eae626083f0\jetified-firebase-firestore-21.4.0\AndroidManifest.xml:13:5-79
-17-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\Kendagor\.gradle\caches\transforms-2\files-2.1\1119d558f2e8d4849ba61eae626083f0\jetified-firebase-firestore-21.4.0\AndroidManifest.xml:13:22-76
+17-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\Kendagor\.gradle\caches\transforms-2\files-2.1\b528e7cddae8ece117bd1804d5b36910\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:13:5-79
+17-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\Kendagor\.gradle\caches\transforms-2\files-2.1\b528e7cddae8ece117bd1804d5b36910\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:13:22-76
 18    <!--
 19 io.flutter.app.FlutterApplication is an android.app.Application that
 20         calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -106,11 +106,11 @@
 67                android:value="com.google.firebase.components.ComponentRegistrar" />
 67-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\Kendagor\.gradle\caches\transforms-2\files-2.1\db61d0b39da5c1f7973871dfa4a90003\firebase-auth-19.2.0\AndroidManifest.xml:38:17-82
 68            <meta-data
-68-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\Kendagor\.gradle\caches\transforms-2\files-2.1\1119d558f2e8d4849ba61eae626083f0\jetified-firebase-firestore-21.4.0\AndroidManifest.xml:20:13-22:85
+68-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\Kendagor\.gradle\caches\transforms-2\files-2.1\b528e7cddae8ece117bd1804d5b36910\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:20:13-22:85
 69                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-69-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\Kendagor\.gradle\caches\transforms-2\files-2.1\1119d558f2e8d4849ba61eae626083f0\jetified-firebase-firestore-21.4.0\AndroidManifest.xml:21:17-111
+69-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\Kendagor\.gradle\caches\transforms-2\files-2.1\b528e7cddae8ece117bd1804d5b36910\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:21:17-111
 70                android:value="com.google.firebase.components.ComponentRegistrar" />
-70-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\Kendagor\.gradle\caches\transforms-2\files-2.1\1119d558f2e8d4849ba61eae626083f0\jetified-firebase-firestore-21.4.0\AndroidManifest.xml:22:17-82
+70-->[com.google.firebase:firebase-firestore:21.3.0] C:\Users\Kendagor\.gradle\caches\transforms-2\files-2.1\b528e7cddae8ece117bd1804d5b36910\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:22:17-82
 71        </service>
 72
 73        <activity
