@@ -1,3 +1,4 @@
+import 'package:brew_crew/shared/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:brew_crew/services/auth.dart';
 
@@ -14,6 +15,7 @@ class _RegisterState extends State<Register> {
 
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
+  bool loading = false;
 
   //text field state
   String email = '';
@@ -21,7 +23,7 @@ class _RegisterState extends State<Register> {
   String error = '';
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return  loading ? Loading() : Scaffold(
       backgroundColor: Colors.brown[200],
       appBar: AppBar(
         actions: <Widget>[
@@ -44,19 +46,35 @@ class _RegisterState extends State<Register> {
             children: <Widget>[
               SizedBox(height:20.0),
               TextFormField(
-                decoration: (
-                  InputDecoration(
-                    hintText: "Email")
-                ),
+                decoration: InputDecoration(
+                    hintText: 'Email',
+                    fillColor:Colors.brown[300],
+                    filled: true,
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color:Colors.brown[300],width: 2.0),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color:Colors.grey[900],width: 2.0)
+                    ),
+                  ),
                 validator: (val) => val.isEmpty ? 'Enter Email' : null,
                 onChanged:(val){
                   setState(() => email = val);
                 }
               ),
+              SizedBox(height:20),
               TextFormField(
                 decoration: InputDecoration(
-                  hintText:('Password'),
-                ),
+                    hintText: 'Password',
+                    fillColor:Colors.brown[300],
+                    filled: true,
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color:Colors.brown[300],width: 2.0),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color:Colors.grey[900],width: 2.0)
+                    ),
+                  ),
                 validator: (val) => val.length <6 ? 'Please enter a password with a minimum of 6 characters': null,
                 obscureText:true,
                 onChanged: (val){
@@ -67,9 +85,13 @@ class _RegisterState extends State<Register> {
               RaisedButton(
                 onPressed: ()async{
                   if (_formKey.currentState.validate()) {
+                    setState(() => loading=true);
                     dynamic result = await _auth.registerWithEmailAndPassword(email, password);
                     if (result == null) {
-                      setState(() => error = 'Enter a valid email address' );
+                      setState(() {
+                        error = 'Enter a valid email address' ;
+                        loading= false;
+                        });
                     }
                   }
                 },
